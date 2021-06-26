@@ -33,3 +33,54 @@ function notfoundHandler(req, res) {
 server.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
+
+///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
+// const Courses = require("./collections/courses");
+// const axios = require("axios");
+
+// function homeHandler(req, res) {
+//   class Data {
+//     constructor(item) {
+//       (this.title = item.title),
+//         (this.shortSummary = item.short_summary),
+//         (this.summary = item.summary),
+//         (this.subtitle = item.subtitle),
+//         (this.duration = `${item.expected_duration} ${item.expected_duration_unit}`),
+//         (this.image = item.image),
+//         (this.level = item.level),
+//         (this.syllabus = item.syllabus),
+//         (this.instructors = item.instructors),
+//         (this.requiredKnowledge = item.required_knowledge),
+//         (this.expectedLearning = item.expected_learning),
+//         (this.skills = item.metadata.skills),
+//         (this.tags = item.tags),
+//         (this.tracks = item.tracks),
+//         (this.enrollCount = 0),
+//         (this.rate = 0),
+//         (this.reviewCount = 0);
+//     }
+//   }
+
+//   let url = "https://catalog-api.udacity.com/v1/courses";
+
+//   axios.get(url).then((data) => {
+//     let newdata = data.data.courses
+//       .filter((course) => {
+//         return (
+//           course.image &&
+//           course.instructors &&
+//           course.required_knowledge &&
+//           course.expected_learning &&
+//           course.tracks.includes("Web Development")
+//         );
+//       })
+//       .map((course) => {
+//         return new Data(course);
+//       });
+
+//     const course = new Courses({ courses: newdata });
+//     course.save();
+
+//     res.send(newdata);
+//   });
+// }
