@@ -34,7 +34,7 @@ server.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
 
-///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
+// ///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
 // const Courses = require("./collections/courses");
 // const axios = require("axios");
 
@@ -45,7 +45,7 @@ server.listen(PORT, () => {
 //         (this.shortSummary = item.short_summary),
 //         (this.summary = item.summary),
 //         (this.subtitle = item.subtitle),
-//         (this.duration = `${item.expected_duration} ${item.expected_duration_unit}`),
+//         (this.duration = `${item.expected_duration} weeks`),
 //         (this.image = item.image),
 //         (this.level = item.level),
 //         (this.syllabus = item.syllabus),
