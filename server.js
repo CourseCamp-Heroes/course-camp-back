@@ -11,9 +11,25 @@ server.use(express.json()); // to read POST request as json (if don't use it you
 
 const PORT = process.env.PORT;
 
-
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+//localhost:3001
+server.get("/", homeHandler);
+
+//localhost:3001/*
+server.get("*", notfoundHandler);
 
 //////////////////////////////////////////// functions //////////////////////////////////////
 
-//////////////////////////////////////////// listen /////////////////////////////////////////
+function homeHandler(req, res) {
+  res.send("Home page");
+}
+
+function notfoundHandler(req, res) {
+  res.status(404).send("Page Not found");
+}
+
+/////////////////////////////////////////// listen ///////////////////////////////////////////
+
+server.listen(PORT, () => {
+  console.log(`listening on ${PORT}`);
+});
