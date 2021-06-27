@@ -34,6 +34,10 @@ server.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
 
+/////////////////////////////////////////// feedbacks nemh&noor ///////////////////////////////////////////
+const FeedbacksHandler=require('./collections/feedbacks');
+server.put("/feedback", FeedbacksHandler);
+
 // ///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
 // const Courses = require("./collections/courses");
 // const axios = require("axios");
