@@ -4,6 +4,7 @@
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
+const getBlogHandler = require('./modules/getBlogHandler');
 
 const server = express();
 server.use(cors());
@@ -12,6 +13,9 @@ server.use(express.json()); // to read POST request as json (if don't use it you
 const PORT = process.env.PORT;
 
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+//localhost:3001
+server.get("/blog", getBlogHandler);
+
 //localhost:3001
 server.get("/", homeHandler);
 
