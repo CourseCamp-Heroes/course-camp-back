@@ -52,6 +52,48 @@ server.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
 
+//////////////////////////////////////users dummy////////////////////////////////////////////
+
+// const Users = require("./collections/users");
+
+// function homeHandler(req, res) {
+//   let obj1 = new Users({
+//     email: "rralakhras@gmail.com",
+//     courses: [
+//       {
+//         title: "Intro to AJAX",
+//         img: "https://d20vrrgs8k4bvw.cloudfront.net/images/courses/thumbnails/ud110_thumbnail.jpg",
+//         subtitle: "Making Asynchronous Requests with jQuery",
+//       },
+//       {
+//         title: "Introduction to Python Programming",
+//         img: "https://d20vrrgs8k4bvw.cloudfront.net/images/course-catalog/en-us/catalog-img-ud1110.png",
+//         subtitle: "Learn to solve practical problems with Python",
+//       },
+//     ],
+//     favs: [
+//       {
+//         title: "Intro to Relational Databases",
+//         img: "https://d20vrrgs8k4bvw.cloudfront.net/images/courses/thumbnails/ud197_thumbnail.jpg",
+//       },
+//       {
+//         title: "Networking for Web Developers",
+//         img: "https://d20vrrgs8k4bvw.cloudfront.net/images/courses/thumbnails/ud256_thumbnail.jpg",
+//       },
+//     ],
+//     reviews: [
+//       {
+//         username: "Rawan Alakhras",
+//         title: "Intro to Relational Databases",
+//         rate: 3,
+//         comment: "good course",
+//       },
+//     ],
+//   });
+
+//   obj1.save();
+// }
+
 ///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
 // const Courses = require("./collections/courses");
 // const axios = require("axios");

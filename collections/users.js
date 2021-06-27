@@ -13,7 +13,7 @@ mongoose.connect(`${MONGO_URL}/projectDB`, {
 const course = new mongoose.Schema({
   title: String,
   img: String,
-  shortSummary: String,
+  subtitle: String,
 });
 
 const fav = new mongoose.Schema({
@@ -24,6 +24,7 @@ const fav = new mongoose.Schema({
 const review = new mongoose.Schema({
   username: String,
   title: String,
+  rate: Number,
   comment: String,
   date: {
     type: Date,
