@@ -12,6 +12,13 @@ server.use(express.json()); // to read POST request as json (if don't use it you
 const PORT = process.env.PORT;
 
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+
+///////new ibrahim //////////
+const allCoursesHandler = require("./modules/allCoursesHandler");
+
+//localhost:3001/allcourses
+server.get("/allcourses", allCoursesHandler);
+
 //localhost:3001
 server.get("/", homeHandler);
 
@@ -35,10 +42,10 @@ server.listen(PORT, () => {
 });
 
 /////////////////////////////////////////// feedbacks nemh&noor ///////////////////////////////////////////
-const FeedbacksHandler=require('./collections/feedbacks');
+const FeedbacksHandler = require("./collections/feedbacks");
 server.put("/feedback", FeedbacksHandler);
 
-// ///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
+///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
 // const Courses = require("./collections/courses");
 // const axios = require("axios");
 

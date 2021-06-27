@@ -12,7 +12,7 @@ mongoose.connect(`${MONGO_URL}/projectDB`, {
 // schemas:
 const userInfo = new mongoose.Schema({
   name: String,
-  Comment: String,
+  comment: String,
   date: {
     type: Date,
     default: Date.now,
