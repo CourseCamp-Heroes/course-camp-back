@@ -10,13 +10,17 @@ mongoose.connect(`${MONGO_URL}/projectDB`, {
 });
 
 // schemas:
-const feedbacks = new mongoose.Schema({
+const userInfo = new mongoose.Schema({
   name: String,
   Comment: String,
   date: {
     type: Date,
     default: Date.now,
   },
+});
+
+const feedbacks = new mongoose.Schema({
+  feedbacks: [userInfo],
 });
 
 // modals:
