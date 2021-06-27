@@ -4,15 +4,26 @@
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
-const getBlogHandler = require('./modules/getBlogHandler');
+const getBlogHandler = require("./modules/getBlogHandler");
 
 const server = express();
 server.use(cors());
 server.use(express.json()); // to read POST request as json (if don't use it you will have undefiend)
 
 const PORT = process.env.PORT;
-
+const allCoursesHandler = require("./modules/allCoursesHandler");
+const feedbackHandler = require("./modules/feedbackHandler");
+const getfeedbackHandler = require("./modules/getfeedbackHandler");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+//localhost:3001//addComment
+server.post("/addComment", feedbackHandler);
+
+//localhost:3001/getComment
+server.get("/getComment", getfeedbackHandler);
+
+//localhost:3001/allcourses
+server.get("/allcourses", allCoursesHandler);
+
 //localhost:3001
 server.get("/blog", getBlogHandler);
 
@@ -38,11 +49,7 @@ server.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
 
-/////////////////////////////////////////// feedbacks nemh&noor ///////////////////////////////////////////
-const FeedbacksHandler=require('./collections/feedbacks');
-server.put("/feedback", FeedbacksHandler);
-
-// ///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
+///////////////////////////////////////////test initilize courses on DB //////////////////////////////////////////////
 // const Courses = require("./collections/courses");
 // const axios = require("axios");
 
