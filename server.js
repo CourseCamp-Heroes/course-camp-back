@@ -4,6 +4,7 @@
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
+const getBlogHandler = require('./modules/getBlogHandler');
 
 const server = express();
 server.use(cors());
@@ -18,6 +19,9 @@ const allCoursesHandler = require("./modules/allCoursesHandler");
 
 //localhost:3001/allcourses
 server.get("/allcourses", allCoursesHandler);
+
+//localhost:3001
+server.get("/blog", getBlogHandler);
 
 //localhost:3001
 server.get("/", homeHandler);
