@@ -8,7 +8,6 @@ function getUserCourses(req, res) {
     if (err) {
       res.status(500).send("There is an error");
     } else {
-      console.log("get");
       res.send(data[0].courses);
     }
   });

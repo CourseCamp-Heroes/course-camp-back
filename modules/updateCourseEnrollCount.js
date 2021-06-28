@@ -10,13 +10,6 @@ function updateCourseEnrollCount(req, res) {
       return elem.title == title;
     });
 
-    // data[0].courses = data[0].courses.map((obj, i) => {
-    //   if (index == i) {
-    //     obj.enrollCount = obj.enrollCount + 1;
-    //     return obj;
-    //   }
-    //   return obj;
-    // });
     let obj = data[0].courses[index];
 
     data[0].courses.splice(index, 1, {
