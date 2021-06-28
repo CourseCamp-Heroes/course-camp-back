@@ -15,10 +15,25 @@ const PORT = process.env.PORT;
 const allCoursesHandler = require("./modules/allCoursesHandler");
 const feedbackHandler = require("./modules/feedbackHandler");
 const getfeedbackHandler = require("./modules/getfeedbackHandler");
-
+const addUserCourse = require("./modules/addUserCourse");
+const getUserCourses = require("./modules/getUserCourses");
+const updateCourseEnrollCount = require("./modules/updateCourseEnrollCount");
+const getAllUserData = require("./modules/getAllUserData");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
 
-//localhost:3001//addComment
+//localhost:3001/getAllUserData
+server.get("/getAllUserData", getAllUserData);
+
+//localhost:3001/updateCourseEnrollCount
+server.put("/updateCourseEnrollCount", updateCourseEnrollCount);
+
+//localhost:3001/getusercourses
+server.get("/getusercourses", getUserCourses);
+
+//localhost:3001/addusercourse
+server.post("/addusercourse", addUserCourse);
+
+//localhost:3001/addComment
 server.post("/addComment", feedbackHandler);
 
 //localhost:3001/getComment
@@ -110,7 +125,6 @@ server.listen(PORT, () => {
 //         (this.level = item.level),
 //         (this.syllabus = item.syllabus),
 //         (this.instructors = item.instructors),
-//         (this.requiredKnowledge = item.required_knowledge),
 //         (this.expectedLearning = item.expected_learning),
 //         (this.skills = item.metadata.skills),
 //         (this.tags = item.tags),
