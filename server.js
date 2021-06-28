@@ -18,7 +18,11 @@ const getfeedbackHandler = require("./modules/getfeedbackHandler");
 const addUserCourse = require("./modules/addUserCourse");
 const getUserCourses = require("./modules/getUserCourses");
 const updateCourseEnrollCount = require("./modules/updateCourseEnrollCount");
+const getAllUserData = require("./modules/getAllUserData");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+
+//localhost:3001/getAllUserData
+server.get("/getAllUserData", getAllUserData);
 
 //localhost:3001/updateCourseEnrollCount
 server.put("/updateCourseEnrollCount", updateCourseEnrollCount);
