@@ -4,7 +4,7 @@ const axios = require('axios');
 
 function getBlogHandler(request,response){
 
-    let keyWordsArr = ['html','css','javascript','react'];
+    let keyWordsArr = ['html','css','javascript','react','python','jquery','ruby','heroku','linux','networking','http'];
 
     let randNum= Math.floor(Math.random() * (keyWordsArr.length - 0) ) + 0;
    
