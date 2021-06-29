@@ -19,7 +19,19 @@ const addUserCourse = require("./modules/addUserCourse");
 const getUserCourses = require("./modules/getUserCourses");
 const updateCourseEnrollCount = require("./modules/updateCourseEnrollCount");
 const getAllUserData = require("./modules/getAllUserData");
+const addUserFav = require("./modules/addUserFav");
+const getUserFavs = require("./modules/getUserFavs");
+const updateCourseReviewCount = require("./modules/updateCourseReviewCount");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+
+//localhost:3001/updateCourseReviewCount
+server.put("/updateCourseReviewCount", updateCourseReviewCount);
+
+//localhost:3001/getuserfavs
+server.get("/getuserfavs", getUserFavs);
+
+//localhost:3001/adduserfav
+server.post("/adduserfav", addUserFav);
 
 //localhost:3001/getAllUserData
 server.get("/getAllUserData", getAllUserData);
