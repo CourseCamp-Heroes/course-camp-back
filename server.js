@@ -22,6 +22,8 @@ const getAllUserData = require("./modules/getAllUserData");
 const addUserFav = require("./modules/addUserFav");
 const getUserFavs = require("./modules/getUserFavs");
 const updateCourseReviewCount = require("./modules/updateCourseReviewCount");
+const deleteUserCourse = require("./modules/deleteUserCourse");
+const decreaseEnrollCount = require("./modules/decreaseEnrollCount");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
 
 //localhost:3001/updateCourseReviewCount
@@ -32,6 +34,11 @@ server.get("/getuserfavs", getUserFavs);
 
 //localhost:3001/adduserfav
 server.post("/adduserfav", addUserFav);
+
+////////////////////////////////////////////// routes ///////////////////////////////////////
+
+//localhost:3001/decreaseEnrollCount
+server.put("/decreaseEnrollCount", decreaseEnrollCount);
 
 //localhost:3001/getAllUserData
 server.get("/getAllUserData", getAllUserData);
@@ -56,6 +63,9 @@ server.get("/allcourses", allCoursesHandler);
 
 //localhost:3001
 server.get("/blog", getBlogHandler);
+
+//localhost:3001/deleteusercourse
+server.delete("/deleteusercourse", deleteUserCourse);
 
 //localhost:3001
 server.get("/", homeHandler);
