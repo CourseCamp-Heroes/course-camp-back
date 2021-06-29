@@ -19,7 +19,12 @@ const addUserCourse = require("./modules/addUserCourse");
 const getUserCourses = require("./modules/getUserCourses");
 const updateCourseEnrollCount = require("./modules/updateCourseEnrollCount");
 const getAllUserData = require("./modules/getAllUserData");
+const deleteUserCourse = require("./modules/deleteUserCourse");
+const decreaseEnrollCount = require("./modules/decreaseEnrollCount");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+
+//localhost:3001/decreaseEnrollCount
+server.put("/decreaseEnrollCount", decreaseEnrollCount);
 
 //localhost:3001/getAllUserData
 server.get("/getAllUserData", getAllUserData);
@@ -44,6 +49,9 @@ server.get("/allcourses", allCoursesHandler);
 
 //localhost:3001
 server.get("/blog", getBlogHandler);
+
+//localhost:3001/deleteusercourse
+server.delete("/deleteusercourse", deleteUserCourse);
 
 //localhost:3001
 server.get("/", homeHandler);
