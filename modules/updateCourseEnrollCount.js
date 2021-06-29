@@ -16,7 +16,7 @@ function updateCourseEnrollCount(req, res) {
       ...obj,
       enrollCount: obj.enrollCount + 1,
     });
-
+    console.log("add enrol");
     data[0].save(); // here saving the whole documnet
     res.send(data[0].courses);
   });

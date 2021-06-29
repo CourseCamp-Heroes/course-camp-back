@@ -24,7 +24,15 @@ const getUserFavs = require("./modules/getUserFavs");
 const updateCourseReviewCount = require("./modules/updateCourseReviewCount");
 const deleteUserCourse = require("./modules/deleteUserCourse");
 const decreaseEnrollCount = require("./modules/decreaseEnrollCount");
+const decreaseReviewCount = require("./modules/decreaseReviewCount");
+const deleteuserfav = require("./modules/deleteuserfav");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+
+//localhost:3001/deleteuserfav
+server.delete("/deleteuserfav", deleteuserfav);
+
+//localhost:3001/decreaseReviewCount
+server.put("/decreaseReviewCount", decreaseReviewCount);
 
 //localhost:3001/updateCourseReviewCount
 server.put("/updateCourseReviewCount", updateCourseReviewCount);

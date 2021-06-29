@@ -2,7 +2,7 @@
 
 const Users = require("../collections/users");
 
-function deleteUserCourse(req, res) {
+function deleteuserfav(req, res) {
   const index = Number(req.query.index);
   const userEmail = req.query.userEmail;
 
@@ -10,11 +10,11 @@ function deleteUserCourse(req, res) {
     if (error) {
       res.status(500).send("there is an error");
     } else {
-      userCourses.courses.splice(index, 1);
-
+      userCourses.favs.splice(index, 1);
       userCourses.save();
+      res.send(userCourses.favs);
     }
   });
 }
 
-module.exports = deleteUserCourse;
+module.exports = deleteuserfav;
