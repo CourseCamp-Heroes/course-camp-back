@@ -35,8 +35,6 @@ server.get("/getuserfavs", getUserFavs);
 //localhost:3001/adduserfav
 server.post("/adduserfav", addUserFav);
 
-////////////////////////////////////////////// routes ///////////////////////////////////////
-
 //localhost:3001/decreaseEnrollCount
 server.put("/decreaseEnrollCount", decreaseEnrollCount);
 
