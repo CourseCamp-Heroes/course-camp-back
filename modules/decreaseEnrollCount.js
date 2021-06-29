@@ -9,7 +9,6 @@ function decreaseEnrollCount(req, res) {
     let index = data[0].courses.findIndex((elem) => {
       return elem.title == title;
     });
-    // console.log(data[0].courses[index].enrollCount);
 
     let obj = data[0].courses[index];
 
@@ -17,7 +16,7 @@ function decreaseEnrollCount(req, res) {
       ...obj,
       enrollCount: obj.enrollCount - 1,
     });
-// console.log(data[0].courses[index].enrollCount);
+    console.log("decerase enrol");
     data[0].save(); // here saving the whole documnet
     res.send(data[0].courses);
   });
