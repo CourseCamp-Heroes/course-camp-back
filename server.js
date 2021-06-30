@@ -26,7 +26,11 @@ const deleteUserCourse = require("./modules/deleteUserCourse");
 const decreaseEnrollCount = require("./modules/decreaseEnrollCount");
 const decreaseReviewCount = require("./modules/decreaseReviewCount");
 const deleteuserfav = require("./modules/deleteuserfav");
+const addUser = require("./modules/addUser");
 ////////////////////////////////////////////// routes ///////////////////////////////////////
+
+//localhost:3001/addUser
+server.post("/addUser", addUser);
 
 //localhost:3001/deleteuserfav
 server.delete("/deleteuserfav", deleteuserfav);
