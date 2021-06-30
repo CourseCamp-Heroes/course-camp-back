@@ -13,6 +13,8 @@ function deleteUserCourse(req, res) {
       userCourses.courses.splice(index, 1);
 
       userCourses.save();
+      console.log("delete");
+      res.send(userCourses.courses);
     }
   });
 }
