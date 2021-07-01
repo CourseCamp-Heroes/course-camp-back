@@ -11,8 +11,10 @@ function addUser(req, res) {
       });
       newuser.save();
       console.log("user added");
+      res.send("user added");
     } else {
       console.log("user exsit");
+      res.send("user exist");
     }
   });
 }
